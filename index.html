@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Melinda Buharova</title>
   <link href="./style.css" type="text/css" rel="stylesheet">
  
@@ -15,55 +15,82 @@
 
 <body>
 
-<!-- SIDEBAR NAV -->
-    <nav id>
-        <a>HOME</a>
-        <a>ABOUT</a>
-        <a>PROJECTS</a>
-        <a>STACK</a>
-        <a>CV</a>
-        <a>CONTACT</a>
-    </nav>
+<!-- Sidebar Nav & Menu Icon -->
+    <div class="sidebar_container">
+
+        <div class="menu_icon_box">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div class="sidebar_box">
+            <nav id="my_sidebar" class="sidebar">
+                <!-- Add profile picture here -->
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">PROJECTS</a></li>
+                    <li><a href="#">STACK</a></li>
+                    <li><a href="#">CV</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
 <!-- HOME SECTION -->
-    <section id="myHome" class="homeSection">
-
+    <section id="my_home" class="home_section">
+        <h1>Hey, I'm Mel </h1>
     </section>
 
 <!-- ABOUT SECTION -->
-    <section id="" class="">
-
+    <section id="my_about" class="about_section">
+        <h1>ABOUT</h1>
     </section>
 
 <!-- PROJECTS SECTION -->
-    <section id="" class="">
-
+    <section id="my_projects" class="">
+        <h1>PROJECTS</h1>
     </section>
 
 <!-- STACK SECTION -->
-    <section id="" class="">
-
+    <section id="my_stack" class="">
+        <h1>MY STACK</h1>
     </section>
 
 <!-- CV SECTION -->
-    <section id="" class="">
-
+    <section id="my_cv" class="">
+        <h1>CV</h1>
     </section>
 
 <!-- CONTACT FORM -->
-    <section id="" class="">
-
+    <section id="my_contact" class="">
+        <h1>CONTACT</h1>
     </section>
 
 
 
-    <footer id="myFooter" class="footerSection">
+    <footer id="my_footer" class="footer_section">
         <p>Melinda Buharova</p>
     </footer>
     
 <!-- SCRIPT LINK -->
     <script>
+        let menu_icon_box = document.querySelector(".menu_icon_box");
+        let sidebar = document.querySelector(".sidebar_box");
 
+        menu_icon_box.onclick = function() {
+            menu_icon_box.classList.toggle("active");
+            sidebar.classList.toggle("active");
+        }
+
+        document.onclick = function(e) {
+            if(!menu_icon_box.contains(e.target) && !sidebar_box.contains(e.target)) {
+                menu_icon_box.classList.remove("active");
+                sidebar.classList.remove("active");
+            }
+        }
     </script>
 
 </body>
