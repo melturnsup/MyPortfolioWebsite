@@ -1,18 +1,20 @@
 /* UNIVERSAL STYLES */
-* {
+* { 
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 html {
     font-size: 16px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #fffadf;
 }
 
 /* Navigation Sidebar Position */
 
 .sidebar_container {
     width: 100%;
-    
     background-color: #fff2eb;
     
 }
@@ -20,7 +22,7 @@ html {
 .sidebar_box {
     width: fit-content;
     height: 100vh;
-    background-color: #9c7a68;
+    background-color: #ffb8b4;
     position: fixed;
     text-align: left;
     z-index: 1;
@@ -50,26 +52,26 @@ html {
 }
 
 .bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #000000;
-  margin: 6px 0;
-  transition: 0.2s;
+    width: 35px;
+    height: 5px;
+    background-color: #000000;
+    margin: 6px 0;
+    transition: 0.2s;
 }
 
 .active .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
+    transform: translate(0, 11px) rotate(-45deg);
 }
 
 .active .bar2 {opacity: 0;}
 
 .active .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
+    transform: translate(0, -11px) rotate(45deg);
 }
 
 /*Navigation style*/
 nav {
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 nav ul {
@@ -88,6 +90,7 @@ nav ul li a {
     padding: 10px 30px;
     display: block;
     text-decoration: none;
+    text-align: center;
     transition: 0.3s;
 }
 
@@ -95,23 +98,195 @@ nav ul li a:hover {
     color: red;
 }
 
+/* Profile picture style*/
+
+#profile_pic {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
 /*Home Section Style*/
 .home_section {
     height: 100vh;
-    text-align: center;
-    background-color: #fff2eb;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Rework these headings below so that they decend from the section class
+ into the tags. like: .home-section h1 */
+#home_heading {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*About Section Style*/
 .about_section {
     height: 100vh;
 }
 
-.footer_section {
+#about_heading {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.about_description {
+    display: inline-flex;
+    padding: 30px;
+    flex-basis: 48%;
+}
+
+.about_description img {
+    width: 200px;
+    padding-right: 20px;
+}
+
+.about_description p {
+    width: 400px;
+}
+
+/*Project Section Style*/
+.project_section {
+    height: 100vh;
+    
+}
+
+#projects_heading {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.project_gallery img {
+    display: flex;
+    width: 30%;
+    margin: 1.6%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    float: left;
+}
+
+/*Stack Section Style*/
+.stack_section {
+    height: 100vh;
+}
+
+#stack_heading {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.stack_section i {
+    font-size: 30px;
+    
+
+
+}
+
+/*CV Section Style*/
+.cv_section {
+    height: 100vh;
+}
+
+#cv_heading {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/*Contact Section Style*/
+#contact_heading {
+    padding-bottom: 30px;
+   
+}
+
+.contact_section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+form {
+    width: 90%;
+    max-width: 600px;
+    padding: 40px; 
+    /*filter: drop-shadow(7px 7px 5px #be9393)*/
+}
+
+.row {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row .input_group {
+    flex-basis: 48%
+}
+
+.input_group {
+    margin-bottom: 30px;
     position: relative;
+
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #000000;
+    color: #000000;
+    background: transparent;
+    font-size: 15px;
+}
+
+label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #000000;
+    cursor: text;
+    transition: 0.2s;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top: -30px;
+    left:-7px;
+    font-size: 13px;
+}
+#submit_button {
+    padding: 10px 0;
+    background: transparent;
+    border: 1px solid #000000;
+    width: 100%;
+    cursor: pointer;
+}
+
+#submit_button:hover {
+    background-color: #ffcfcf;
+}
+
+
+/*Footer style*/
+footer {
+    position: absolute;
     width: 100%;
     text-align: center;
     color:#fff2eb;
     padding: 10px;
-    background-color: #4c2a2a;
+    background-color: rgb(181, 38, 28);
+}
+
+footer a {
+    color: #ffffff;
+    padding-right: 10px;
 }

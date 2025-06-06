@@ -8,8 +8,8 @@
   <title>Melinda Buharova</title>
   <link href="./style.css" type="text/css" rel="stylesheet">
  
-  <!-- Fonts -->
-  
+  <!-- FONTS -->
+  <script src="https://kit.fontawesome.com/a9e35d03f6.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -26,16 +26,14 @@
 
         <div class="sidebar_box">
             <nav id="my_sidebar" class="sidebar">
-                <!-- Add profile picture here -->
-                
                 <ul>
-                    <li></li>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">PROJECTS</a></li>
-                    <li><a href="#">STACK</a></li>
-                    <li><a href="#">CV</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><img id="profile_pic" src="./resources/blank_profile_pic.png" alt="Profile Picture of Melinda"></li>
+                    <li><a href="#my_home">HOME</a></li>
+                    <li><a href="#my_about">ABOUT</a></li>
+                    <li><a href="#my_projects">PROJECTS</a></li>
+                    <li><a href="#my_stack">STACK</a></li>
+                    <li><a href="#my_cv">CV</a></li>
+                    <li><a href="#my_contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,58 +41,113 @@
 
 <!-- HOME SECTION -->
     <section id="my_home" class="home_section">
-        <h1>Hey, I'm Mel </h1>
-        <img src="MyPortfolioWebsite/resources/blank_profile_pic.png" alt="Profile Picture of Melinda">
+        <h1 id="home_heading">Hey I'm Melinda, <br>Welcome to my website :)</h1>
     </section>
+    <p>I want something fun and interactive here, like a line that follows the cursor or gradient shifts, still need to think about my brand colours...</p>
+       
 
 <!-- ABOUT SECTION -->
     <section id="my_about" class="about_section">
-        <h1>ABOUT</h1>
+        <h1 id="about_heading">ABOUT</h1>
+        <div class="about_description">
+        <img src="./resources/blank_profile_pic.png" alt="Profile Picture of Melinda">
+        <p>Hey there, I'm Mel and I'm looking for new professional opportunities. I have been bitten by the coding bug - I particularly enjoy implementing an accessible  and empathetic user experience </p>
+        </div>
     </section>
 
 <!-- PROJECTS SECTION -->
-    <section id="my_projects" class="">
-        <h1>PROJECTS</h1>
+    <section id="my_projects" class="project_section">
+
+        <h1 id="projects_heading">PROJECTS</h1>
+        <p style="color: red;text-align: center;">Implement css grid for this gallery instead!</p>
+
+        <div class="project_gallery">
+        
+            <div>
+                <img src="./resources/blank_profile_pic.png">
+            </div>
+
+            <div>
+                <img src="./resources/blank_profile_pic.png">
+            </div>
+
+            <div>
+                <img src="./resources/blank_profile_pic.png">
+            </div>
+
+        </div>
     </section>
 
 <!-- STACK SECTION -->
-    <section id="my_stack" class="">
-        <h1>MY STACK</h1>
+    <section id="my_stack" class="stack_section">
+        <h1 id="stack_heading">MY STACK</h1>
+
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css"></i>
+        <i class="fa-brands fa-js"></i>
+        <i class="fa-brands fa-python"></i>
+        <i class="fa-brands fa-github"></i>
     </section>
 
 <!-- CV SECTION -->
-    <section id="my_cv" class="">
-        <h1>CV</h1>
+    <section id="my_cv" class="cv_section">
+        <h1 id="cv_heading">CV</h1>
+
+        <h2>Experience</h2>
+        <h2>Education</h2>
     </section>
 
 <!-- CONTACT FORM -->
-    <section id="my_contact" class="">
-        <h1>CONTACT</h1>
+    <section id="my_contact" class="contact_section">
+        <!--<h1 id="contact_heading">SAY HELLO!</h1>-->
+
+
+    <form action="/example.html" method="POST">
+
+        <h2 id="contact_heading">SAY HELLO!</h2>
+        
+        <div class="row">
+            <div class="input_group">
+                <input type="text" name="name" id="name" required>
+                <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
+            </div>
+            <div class="input_group">
+                <input type="email" name="email" id="email" required>
+                <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+            </div>
+        </div>
+
+        <div class="input_group">
+            <input type="text" name="subject" id="subject" required>
+            <label for="subject">Subject (optional)</label>
+        </div>
+        <div class="input_group">
+            <textarea id="message" name="message" rows="8"  required></textarea>
+            <label for="message"><i class="fa-solid fa-message"></i> Message</label>
+        </div>
+        <button id="submit_button" type="submit">SEND</button>
+    </form>
+    </div>
+        
     </section>
 
-
-
-    <footer id="my_footer" class="footer_section">
+<!-- FOOTER -->
+    <footer id="my_footer" class="footer">
+    
+    <div id="left_align">
         <p>Melinda Buharova</p>
+        <a href="#">INSTAGRAM</a>
+        <a href="#">LINKEDIN</a>
+        <a href="#">EMAIL</a>
+    </div>
+    <div id="right_align">
+        <p>BASED IN SCOTLAND</p>
+        <p>©2025</p>
+    </div>
     </footer>
     
-<!-- SCRIPT LINK -->
-    <script>
-        let menu_icon_box = document.querySelector(".menu_icon_box");
-        let sidebar = document.querySelector(".sidebar_box");
-
-        menu_icon_box.onclick = function() {
-            menu_icon_box.classList.toggle("active");
-            sidebar.classList.toggle("active");
-        }
-
-        document.onclick = function(e) {
-            if(!menu_icon_box.contains(e.target) && !sidebar_box.contains(e.target)) {
-                menu_icon_box.classList.remove("active");
-                sidebar.classList.remove("active");
-            }
-        }
-    </script>
+<!-- JAVASCRIPT -->
+    <script src="script.js"></script>
 
 </body>
 </html>
