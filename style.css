@@ -11,6 +11,7 @@ html {
     background-color: #fffadf;
 }
 
+
 /* Navigation Sidebar Position */
 
 .sidebar_container {
@@ -118,6 +119,7 @@ nav ul li a:hover {
 #home_heading {
     font-size: 40px;
     font-family: 'Courier New', Courier, monospace;
+    transition: 0.3s ease;
 }
 
 /*About Section Style*/
@@ -148,8 +150,8 @@ nav ul li a:hover {
 
 /*Project Section Style*/
 .project_section {
-    height: 100vh;
-    
+    height: auto;
+
 }
 
 #projects_heading {
@@ -158,13 +160,59 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.project_gallery img {
+.project_gallery {
     display: flex;
-    width: 30%;
-    margin: 1.6%;
-    margin-top: 30px;
-    margin-bottom: 60px;
-    float: left;
+    flex-wrap: wrap;
+    justify-content: center;       /* This centers all the project cards */
+    gap: 24px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.project_card {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background: #fff;
+}
+
+.project_card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.project_info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+    opacity: 0;
+}
+
+.project_info h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.project_info p {
+    font-size: 0.9rem;
+}
+
+/* Reveal card when mouse hover over project */
+.project_card:hover .project_info {
+    opacity: 1;
 }
 
 /*Stack Section Style*/
@@ -180,8 +228,6 @@ nav ul li a:hover {
 
 .stack_section i {
     font-size: 30px;
-    
-
 
 }
 
